@@ -1,6 +1,9 @@
 - name: Example clone of a single branch
-  ansible.builtin.git:
-    repo: git@github.com:pbmoses/aap_demo.git
-    dest: /tmp/ansible-examples
-    single_branch: yes
-    version: master
+  hosts: all
+  tasks:
+    - name: clone
+      ansible.builtin.git:
+        repo: git@github.com:pbmoses/aap_demo.git
+        dest: /tmp/ansible-examples
+        single_branch: yes
+        version: master
