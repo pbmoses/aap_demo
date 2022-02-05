@@ -1,5 +1,5 @@
 - name: Example clone of a single branch
-  hosts: all
+  hosts: localhost
   tasks:
     - name: clone
       ansible.builtin.git:
