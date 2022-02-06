@@ -1,8 +1,6 @@
-
-   
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+- name: Example clone of a single branch
+  ansible.builtin.git:
+    repo: git@github.com:pbmoses/aap_demo.git
+    dest: /tmp/ansible-examples
+    single_branch: yes
+    version: master
