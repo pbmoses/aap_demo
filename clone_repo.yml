@@ -1,6 +1,8 @@
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+ - hosts: all
+   tasks:
+   - name: Clone a github repository
+     git:
+       repo: 
+       dest: /tmp/repos
+       clone: yes
+       update: yes
