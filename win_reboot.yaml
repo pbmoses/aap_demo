@@ -1,3 +1,4 @@
+# simple reboot. PMO 
 - name: reboot 
   hosts: all 
 
