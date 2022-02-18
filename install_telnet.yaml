@@ -1,0 +1,7 @@
+- name: reboot 
+  hosts: all 
+  tasks:
+  - name: Install a Windows feature with the WindowsFeature resource
+    ansible.windows.win_dsc:
+      resource_name: WindowsFeature
+      Name: telnet-client
