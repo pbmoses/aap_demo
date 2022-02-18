@@ -1,7 +1,6 @@
 - name: get L2 Cache info and adjust if necessary
   hosts: all
-  gather_facts: no
-  
+  tasks:
   - name: Get the L2 Cache info
       ansible.windows.win_reg_stat:
         path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
