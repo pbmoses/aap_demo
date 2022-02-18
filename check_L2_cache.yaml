@@ -1,17 +1,9 @@
-- name: Check L2 Cache info
-
+- name: Get the L2 Cache info
     ansible.windows.win_reg_stat:
-
       path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
-
       name: SecondLevelDataCache
-
     register: l2_cache_info
 
- 
-
   - name: Print value of L2 cache
-
     debug:
-
       msg: "L2 Cache Value {{ l2_cache_info }}"
