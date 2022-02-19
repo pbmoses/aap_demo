@@ -13,7 +13,7 @@
       data: 1600
       type: dword
     when:
-      l2_cache_info != 1600
+      l2_cache_info.stdout|int != 1600
 
   - name: Print value of L2 cache
     debug:
