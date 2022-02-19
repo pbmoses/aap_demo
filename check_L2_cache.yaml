@@ -6,6 +6,14 @@
       path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
       name: SecondLevelDataCache
     register: l2_cache_info
+  - name: Set L2 cache to 1600 hex
+    ansible.windows.win_regedit:
+      path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
+      name: SecondLevelDataCache
+      data: 1600
+      type: dword
+    when:
+      l2_cache_info != 1600
 
   - name: Print value of L2 cache
     debug:
