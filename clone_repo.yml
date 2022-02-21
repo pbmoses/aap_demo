@@ -1,8 +1,0 @@
- - hosts: all
-   tasks:
-   - name: Clone a github repository
-     ansible.builtin.git:
-       repo: https://github.com/pbmoses/aap_demo.git
-       dest: C:\Users\IEUser\AppData\Local\Temp
-       clone: yes
-       update: yes
