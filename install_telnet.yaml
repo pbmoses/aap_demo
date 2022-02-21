@@ -1,4 +1,4 @@
-- name: reboot 
+- name: Simple Install of Windows telnet 
   hosts: all 
   tasks:
   - name: Install a Windows feature with the WindowsFeature resource
